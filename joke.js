@@ -1,6 +1,7 @@
 const button = document.querySelector("button");
 
 async function displayJoke() {
+  const category = document.getElementById("category").value;
   button.disabled = true;
   button.textContent = "Loading...";
   document.getElementById("setup").textContent = "";
@@ -8,7 +9,7 @@ async function displayJoke() {
   document.getElementById("error").textContent = "";
 
   try {
-    const response = await fetch("https://v2.jokeapi.dev/joke/Programming?type=twopart");
+      const response = await fetch(`https://v2.jokeapi.dev/joke/${category}?type=twopart`);
 
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);

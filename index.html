@@ -112,17 +112,43 @@
       font-size: 0.9rem;
       margin-top: 12px;
     }
+        select {
+      margin-top: 16px;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      color: #e0e0e0;
+      cursor: pointer;
+      outline: none;
+      width: 100%;
+      max-width: 280px;
+    }
+
+    select option {
+      background: #16213e;
+      color: #e0e0e0;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Joke Generator</h1>
+    <select id="category">
+      <option value="Programming">Programming</option>
+      <option value="Misc">Miscellaneous</option>
+      <option value="Pun">Puns</option>
+      <option value="Spooky">Spooky</option>
+      <option value="Christmas">Christmas</option>
+    </select>
     <button id="joke-btn">Get Joke</button>
     <div class="joke-card">
       <p id="setup"></p>
       <p id="punchline"></p>
       <p id="error"></p>
     </div>
+    <select name="" id=""></select>
   </div>
 
   <script src="joke.js"></script>
