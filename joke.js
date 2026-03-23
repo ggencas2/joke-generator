@@ -28,3 +28,11 @@ async function displayJoke() {
 }
 
 button.addEventListener('click', displayJoke);
+
+const resetBtn = document.getElementById("reset-btn");
+
+resetBtn.addEventListener("click", function() {
+  document.getElementById("setup").textContent = "";
+  document.getElementById("punchline").textContent = "";
+  document.getElementById("error").textContent = "";
+});

@@ -112,7 +112,8 @@
       font-size: 0.9rem;
       margin-top: 12px;
     }
-        select {
+    
+    select {
       margin-top: 16px;
       padding: 10px 20px;
       font-size: 0.95rem;
@@ -130,6 +131,20 @@
       background: #16213e;
       color: #e0e0e0;
     }
+
+    #reset-btn {
+      margin-left: 10px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #e0e0e0;
+      box-shadow: none;
+    }
+
+    #reset-btn:hover {
+      background: rgba(255,255,255,0.08);
+      box-shadow: none;
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
@@ -143,6 +158,7 @@
       <option value="Christmas">Christmas</option>
     </select>
     <button id="joke-btn">Get Joke</button>
+    <button id="reset-btn">Reset</button>
     <div class="joke-card">
       <p id="setup"></p>
       <p id="punchline"></p>
